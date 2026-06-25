@@ -32,9 +32,7 @@
     gap: 0.5rem;
   }
   
-  .brand-icon {
-    font-size: 1.5rem;
-  }
+  .brand-icon { font-size: 1.5rem; }
   
   .brand-name {
     font-size: 1.3rem;
@@ -60,7 +58,7 @@
     padding: 0 2rem;
   }
   
-  /* ===== FORM SECTION ===== */
+  /* ===== FORM CARD ===== */
   .form-card {
     background: #ffffff;
     border: 1px solid #ede9fe;
@@ -84,12 +82,22 @@
     margin-bottom: 1.5rem;
   }
   
+  /* ===== FORM ROW (side by side fields) ===== */
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  /* ===== FORM GROUPS ===== */
   .form-group {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
   }
   
   .form-group label {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 0.85rem;
     font-weight: 600;
     color: #6b7280;
@@ -121,10 +129,27 @@
     background: #ffffff;
   }
   
-  .form-group textarea {
-    resize: vertical;
+  .form-group textarea { resize: vertical; }
+  
+  /* ===== FIELD MESSAGES ===== */
+  .field-msg {
+    display: block;
+    font-size: 0.78rem;
+    margin-top: 0.3rem;
+    min-height: 1rem;
+    font-weight: 500;
   }
   
+  /* ===== CHARACTER COUNTER ===== */
+  .char-count {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #9ca3af;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  
+  /* ===== SUBMIT BUTTON ===== */
   .submit-btn {
     width: 100%;
     padding: 0.85rem;
@@ -144,9 +169,7 @@
     transform: translateY(-1px);
   }
   
-  .submit-btn:active {
-    transform: translateY(0);
-  }
+  .submit-btn:active { transform: translateY(0); }
   
   /* ===== FLASH MESSAGES ===== */
   .flash {
@@ -196,7 +219,6 @@
     padding: 3rem;
     text-align: center;
     color: #9ca3af;
-    font-size: 1rem;
   }
   
   .feed-list {
@@ -221,21 +243,10 @@
     box-shadow: 0 8px 25px rgba(99, 102, 241, 0.12);
   }
   
-  .feed-card.category-bug {
-    border-left-color: #f87171;
-  }
-  
-  .feed-card.category-feature {
-    border-left-color: #34d399;
-  }
-  
-  .feed-card.category-idea {
-    border-left-color: #fbbf24;
-  }
-  
-  .feed-card.category-other {
-    border-left-color: #818cf8;
-  }
+  .feed-card.category-bug   { border-left-color: #f87171; }
+  .feed-card.category-feature { border-left-color: #34d399; }
+  .feed-card.category-idea  { border-left-color: #fbbf24; }
+  .feed-card.category-other { border-left-color: #818cf8; }
   
   .feed-card-header {
     display: flex;
@@ -250,8 +261,14 @@
     color: #1e1b4b;
   }
   
+  .feed-badges {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+  }
+  
   .feed-category {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 600;
     padding: 0.2rem 0.6rem;
     border-radius: 999px;
@@ -261,6 +278,20 @@
     letter-spacing: 0.05em;
   }
   
+  /* Priority badges */
+  .feed-priority {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .priority-low    { background: #f0fdf4; color: #16a34a; }
+  .priority-medium { background: #fefce8; color: #ca8a04; }
+  .priority-high   { background: #fef2f2; color: #dc2626; }
+  
   .feed-message {
     font-size: 0.9rem;
     color: #6b7280;
@@ -268,9 +299,18 @@
     margin-bottom: 0.6rem;
   }
   
-  .feed-date {
-    font-size: 0.75rem;
-    color: #9ca3af;
+  .feed-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .feed-date { font-size: 0.75rem; color: #9ca3af; }
+  
+  .feed-id {
+    font-size: 0.72rem;
+    color: #c4b5fd;
+    font-weight: 600;
   }
   
   /* ===== FOOTER ===== */
@@ -285,19 +325,9 @@
   
   /* ===== RESPONSIVE ===== */
   @media (max-width: 768px) {
-    .main-container {
-      grid-template-columns: 1fr;
-    }
-  
-    .form-card {
-      position: static;
-    }
-  
-    .navbar {
-      padding: 1rem 1.5rem;
-    }
-  
-    .nav-tagline {
-      display: none;
-    }
+    .main-container { grid-template-columns: 1fr; }
+    .form-card { position: static; }
+    .navbar { padding: 1rem 1.5rem; }
+    .nav-tagline { display: none; }
+    .form-row { grid-template-columns: 1fr; }
   }
