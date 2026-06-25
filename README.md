@@ -27,4 +27,15 @@ node server.js
 Open http://localhost:3000
 
 ---
+## Task 2: Inline Styles, Basic Interaction & Server-Side Validation
+**Level 1 - Beginner**
+
+Enhanced the feedback board with:
+- Email field with regex validation
+- Priority field (Low / Medium / High) with color-coded badges
+- Real-time client-side validation (inline JavaScript)
+- Character counter on message field (0/500)
+- Stronger server-side validation (email format, length checks)
+- Structured data storage with ID and timestamp
+---
 Built as part of Cognifyz Technologies Full Stack Development Internship.
