@@ -37,5 +37,18 @@ Enhanced the feedback board with:
 - Character counter on message field (0/500)
 - Stronger server-side validation (email format, length checks)
 - Structured data storage with ID and timestamp
+
+---
+## Task 3: Advanced CSS Styling and Responsive Design
+**Level 2 - Intermediate**
+
+Personal developer portfolio built with:
+- Bootstrap 5 responsive grid
+- Interactive particle network (Canvas API + mouse interaction)
+- CSS animations (typing effect, scroll fade-in, skill bars)
+- Multi-section layout (Hero, About, Skills, Projects, Achievements, Contact)
+- Fully responsive across all screen sizes
+- Deep navy + coral + cyan + pink color scheme
+
 ---
 Built as part of Cognifyz Technologies Full Stack Development Internship.
