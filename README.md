@@ -51,4 +51,17 @@ Personal developer portfolio built with:
 - Deep navy + coral + cyan + pink color scheme
 
 ---
+## Task 4: Complex Form Validation and Dynamic DOM Manipulation
+**Level 2 - Intermediate**
+
+Multi-step Profile Builder with:
+- 3-step client-side routing (no page reload)
+- Password strength meter (Weak/Fair/Good/Strong)
+- Real-time checklist validation (length, uppercase, number, special char)
+- Dynamic DOM manipulation (profile card built live from user input)
+- Live skill tag preview as you type
+- Confetti animation on profile creation
+- Progress bar and step indicators
+
+---
 Built as part of Cognifyz Technologies Full Stack Development Internship.
