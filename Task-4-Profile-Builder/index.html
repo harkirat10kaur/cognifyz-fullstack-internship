@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Builder</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <div class="app-wrapper">
+
+    <!-- HEADER -->
+    <header class="app-header">
+      <div class="header-brand">
+        <span class="brand-icon">⚡</span>
+        <span class="brand-name">ProfileBuilder</span>
+      </div>
+      <p class="header-sub">Create your developer profile in 3 steps</p>
+    </header>
+
+    <!-- PROGRESS BAR -->
+    <div class="progress-wrapper">
+      <div class="steps-track">
+        <div class="step-dot active" id="dot1">
+          <span>1</span>
+          <label>Account</label>
+        </div>
+        <div class="step-line" id="line1"></div>
+        <div class="step-dot" id="dot2">
+          <span>2</span>
+          <label>Profile</label>
+        </div>
+        <div class="step-line" id="line2"></div>
+        <div class="step-dot" id="dot3">
+          <span>3</span>
+          <label>Preview</label>
+        </div>
+      </div>
+      <div class="progress mt-3">
+        <div class="progress-bar" id="progressBar" style="width: 33%"></div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+      <!-- ===== STEP 1: Account ===== -->
+      <div class="step-panel active" id="step1">
+        <h2 class="step-title">Create Your Account</h2>
+        <p class="step-sub">Set up your login credentials</p>
+
+        <div class="form-group mb-4">
+          <label>Email Address</label>
+          <div class="input-wrapper">
+            <i class="bi bi-envelope"></i>
+            <input type="email" id="email" class="custom-input" placeholder="you@example.com"/>
+          </div>
+          <span class="field-msg" id="emailMsg"></span>
+        </div>
+
+        <div class="form-group mb-3">
+          <label>Password</label>
+          <div class="input-wrapper">
+            <i class="bi bi-lock"></i>
+            <input type="password" id="password" class="custom-input" placeholder="Create a strong password"/>
+            <i class="bi bi-eye toggle-pw" id="togglePw"></i>
+          </div>
+          <span class="field-msg" id="passwordMsg"></span>
+
+          <!-- Password strength meter -->
+          <div class="strength-meter mt-2">
+            <div class="strength-bar">
+              <div class="strength-fill" id="strengthFill"></div>
+            </div>
+            <span class="strength-label" id="strengthLabel">Enter a password</span>
+          </div>
+
+          <!-- Strength checklist -->
+          <ul class="strength-checklist" id="checklist">
+            <li id="check-length"><i class="bi bi-x-circle-fill"></i> At least 8 characters</li>
+            <li id="check-upper"><i class="bi bi-x-circle-fill"></i> One uppercase letter</li>
+            <li id="check-number"><i class="bi bi-x-circle-fill"></i> One number</li>
+            <li id="check-special"><i class="bi bi-x-circle-fill"></i> One special character (!@#$...)</li>
+          </ul>
+        </div>
+
+        <div class="form-group mb-4">
+          <label>Confirm Password</label>
+          <div class="input-wrapper">
+            <i class="bi bi-lock-fill"></i>
+            <input type="password" id="confirmPassword" class="custom-input" placeholder="Repeat your password"/>
+          </div>
+          <span class="field-msg" id="confirmMsg"></span>
+        </div>
+
+        <button class="btn-next" onclick="goToStep(2)">
+          Continue <i class="bi bi-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- ===== STEP 2: Profile ===== -->
+      <div class="step-panel" id="step2">
+        <h2 class="step-title">Build Your Profile</h2>
+        <p class="step-sub">Tell us about yourself</p>
+
+        <div class="form-group mb-3">
+          <label>Full Name</label>
+          <div class="input-wrapper">
+            <i class="bi bi-person"></i>
+            <input type="text" id="fullName" class="custom-input" placeholder="e.g. Harkirat Kaur"/>
+          </div>
+          <span class="field-msg" id="nameMsg"></span>
+        </div>
+
+        <div class="form-group mb-3">
+          <label>Developer Role</label>
+          <div class="input-wrapper">
+            <i class="bi bi-briefcase"></i>
+            <select id="role" class="custom-input">
+              <option value="" disabled selected>Select your role</option>
+              <option value="Full Stack Developer">Full Stack Developer</option>
+              <option value="Frontend Developer">Frontend Developer</option>
+              <option value="Backend Developer">Backend Developer</option>
+              <option value="Mobile Developer">Mobile Developer</option>
+              <option value="Data Scientist">Data Scientist</option>
+              <option value="DevOps Engineer">DevOps Engineer</option>
+            </select>
+          </div>
+          <span class="field-msg" id="roleMsg"></span>
+        </div>
+
+        <div class="form-group mb-3">
+          <label>
+            Bio
+            <span id="bioCount" class="char-count">0/150</span>
+          </label>
+          <textarea id="bio" class="custom-input" rows="3"
+            placeholder="Tell us about yourself in a few lines..."
+            maxlength="150"></textarea>
+          <span class="field-msg" id="bioMsg"></span>
+        </div>
+
+        <div class="form-group mb-4">
+          <label>Skills (comma separated)</label>
+          <div class="input-wrapper">
+            <i class="bi bi-code-slash"></i>
+            <input type="text" id="skills" class="custom-input"
+              placeholder="e.g. JavaScript, Node.js, Python"/>
+          </div>
+          <div class="skill-tags-preview" id="skillTagsPreview"></div>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn-back" onclick="goToStep(1)">
+            <i class="bi bi-arrow-left"></i> Back
+          </button>
+          <button class="btn-next" onclick="goToStep(3)">
+            Preview <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- ===== STEP 3: Preview ===== -->
+      <div class="step-panel" id="step3">
+        <h2 class="step-title">Your Profile</h2>
+        <p class="step-sub">Here's how your profile looks</p>
+
+        <!-- Dynamic profile card — built by JavaScript -->
+        <div class="profile-card" id="profileCard">
+          <div class="profile-card-header">
+            <div class="profile-avatar" id="previewAvatar">HK</div>
+            <div class="profile-card-info">
+              <h3 id="previewName">Your Name</h3>
+              <p id="previewRole">Your Role</p>
+              <span id="previewEmail" class="preview-email"></span>
+            </div>
+          </div>
+          <div class="profile-card-body">
+            <p id="previewBio" class="preview-bio"></p>
+            <div class="preview-skills" id="previewSkills"></div>
+          </div>
+          <div class="profile-card-footer">
+            <div class="profile-stat">
+              <span id="previewSkillCount">0</span>
+              <label>Skills</label>
+            </div>
+            <div class="profile-stat">
+              <span id="previewStrength">—</span>
+              <label>Password</label>
+            </div>
+            <div class="profile-stat">
+              <span>✓</span>
+              <label>Verified</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Success message -->
+        <div class="success-msg" id="successMsg" style="display:none;">
+          <i class="bi bi-check-circle-fill"></i>
+          Profile created successfully!
+        </div>
+
+        <div class="btn-row mt-4">
+          <button class="btn-back" onclick="goToStep(2)">
+            <i class="bi bi-arrow-left"></i> Edit
+          </button>
+          <button class="btn-submit" onclick="submitProfile()">
+            Create Profile <i class="bi bi-rocket-takeoff"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
