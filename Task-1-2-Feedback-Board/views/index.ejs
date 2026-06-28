@@ -1,0 +1,253 @@
+<%- include('partials/header') %>
+
+<main class="main-container">
+
+  <!-- LEFT: Form Section -->
+  <section class="form-section">
+    <div class="form-card">
+      <h2 class="form-title">Submit Feedback</h2>
+      <p class="form-subtitle">Your thoughts help us build better.</p>
+
+      <!-- Flash Messages -->
+      <% if (success.length > 0) { %>
+        <div class="flash flash-success"><%= success[0] %></div>
+      <% } %>
+      <% if (error.length > 0) { %>
+        <div class="flash flash-error"><%= error[0] %></div>
+      <% } %>
+
+      <form id="feedbackForm" action="/submit" method="POST" novalidate>
+
+        <!-- Name Field -->
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name"
+            placeholder="e.g. Harkirat Kaur" autocomplete="off" />
+          <span class="field-msg" id="nameMsg"></span>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email"
+            placeholder="e.g. harkirat@email.com" autocomplete="off" />
+          <span class="field-msg" id="emailMsg"></span>
+        </div>
+
+        <!-- Category + Priority row -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" name="category">
+              <option value="" disabled selected>Select</option>
+              <option value="Bug">🐛 Bug Report</option>
+              <option value="Feature">✨ Feature Request</option>
+              <option value="Idea">💡 Idea</option>
+              <option value="Other">📝 Other</option>
+            </select>
+            <span class="field-msg" id="categoryMsg"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="priority">Priority</label>
+            <select id="priority" name="priority">
+              <option value="" disabled selected>Select</option>
+              <option value="Low">🟢 Low</option>
+              <option value="Medium">🟡 Medium</option>
+              <option value="High">🔴 High</option>
+            </select>
+            <span class="field-msg" id="priorityMsg"></span>
+          </div>
+        </div>
+
+        <!-- Message Field with character counter -->
+        <div class="form-group">
+          <label for="message">
+            Message
+            <span id="charCount" class="char-count">0/500</span>
+          </label>
+          <textarea id="message" name="message" rows="5"
+            placeholder="Describe your feedback in detail (min 10 characters)..."
+            maxlength="500"></textarea>
+          <span class="field-msg" id="messageMsg"></span>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">
+          Submit Feedback →
+        </button>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- RIGHT: Feedback Feed -->
+  <section class="feed-section">
+    <h2 class="feed-title">
+      Community Feedback
+      <span class="count-badge"><%= feedbacks.length %></span>
+    </h2>
+
+    <% if (feedbacks.length === 0) { %>
+      <div class="empty-state">
+        <p>🌱 No feedback yet. Be the first to submit!</p>
+      </div>
+    <% } else { %>
+      <div class="feed-list">
+        <% feedbacks.forEach(function(fb) { %>
+          <div class="feed-card category-<%= fb.category.toLowerCase() %>">
+            <div class="feed-card-header">
+              <span class="feed-name"><%= fb.name %></span>
+              <div class="feed-badges">
+                <span class="feed-category"><%= fb.category %></span>
+                <span class="feed-priority priority-<%= fb.priority.toLowerCase() %>">
+                  <%= fb.priority %>
+                </span>
+              </div>
+            </div>
+            <p class="feed-message"><%= fb.message %></p>
+            <div class="feed-footer">
+              <span class="feed-date"><%= fb.date %> · <%= fb.timestamp %></span>
+              <span class="feed-id">#<%= fb.id %></span>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    <% } %>
+  </section>
+
+</main>
+
+<!-- ===== CLIENT-SIDE VALIDATION (inline JavaScript) ===== -->
+<script>
+  // ---- Helper functions ----
+  function showError(msgId, inputEl, message) {
+    const msg = document.getElementById(msgId);
+    msg.textContent = message;
+    msg.style.color = '#dc2626';
+    if (inputEl) inputEl.style.borderColor = '#f87171';
+  }
+
+  function showSuccess(msgId, inputEl, message) {
+    const msg = document.getElementById(msgId);
+    msg.textContent = message;
+    msg.style.color = '#16a34a';
+    if (inputEl) inputEl.style.borderColor = '#4ade80';
+  }
+
+  function clearMsg(msgId, inputEl) {
+    const msg = document.getElementById(msgId);
+    msg.textContent = '';
+    if (inputEl) inputEl.style.borderColor = '';
+  }
+
+  // ---- Email regex ----
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // ---- Name validation (on input) ----
+  const nameInput = document.getElementById('name');
+  nameInput.addEventListener('input', function () {
+    if (this.value.trim().length === 0) {
+      clearMsg('nameMsg', this);
+    } else if (this.value.trim().length < 2) {
+      showError('nameMsg', this, 'Name must be at least 2 characters.');
+    } else {
+      showSuccess('nameMsg', this, '✓ Looks good!');
+    }
+  });
+
+  // ---- Email validation (on blur — when user clicks away) ----
+  const emailInput = document.getElementById('email');
+  emailInput.addEventListener('blur', function () {
+    if (this.value.trim() === '') {
+      showError('emailMsg', this, 'Email is required.');
+    } else if (!emailRegex.test(this.value.trim())) {
+      showError('emailMsg', this, 'Please enter a valid email.');
+    } else {
+      showSuccess('emailMsg', this, '✓ Valid email!');
+    }
+  });
+
+  emailInput.addEventListener('input', function () {
+    if (emailRegex.test(this.value.trim())) {
+      showSuccess('emailMsg', this, '✓ Valid email!');
+    }
+  });
+
+  // ---- Category validation ----
+  const categorySelect = document.getElementById('category');
+  categorySelect.addEventListener('change', function () {
+    if (this.value) {
+      showSuccess('categoryMsg', this, '✓ Selected!');
+    }
+  });
+
+  // ---- Priority validation ----
+  const prioritySelect = document.getElementById('priority');
+  prioritySelect.addEventListener('change', function () {
+    if (this.value) {
+      showSuccess('priorityMsg', this, '✓ Selected!');
+    }
+  });
+
+  // ---- Character counter + message validation ----
+  const messageInput = document.getElementById('message');
+  const charCount = document.getElementById('charCount');
+
+  messageInput.addEventListener('input', function () {
+    const len = this.value.length;
+    charCount.textContent = len + '/500';
+
+    if (len < 10) {
+      charCount.style.color = '#dc2626';
+      showError('messageMsg', this, `${10 - len} more characters needed.`);
+    } else if (len > 450) {
+      charCount.style.color = '#f59e0b';
+      showSuccess('messageMsg', this, '✓ Good — approaching limit.');
+    } else {
+      charCount.style.color = '#16a34a';
+      showSuccess('messageMsg', this, '✓ Great length!');
+    }
+  });
+
+  // ---- Form submit validation ----
+  document.getElementById('feedbackForm').addEventListener('submit', function (e) {
+    let valid = true;
+
+    // Check name
+    if (nameInput.value.trim().length < 2) {
+      showError('nameMsg', nameInput, 'Name is required (min 2 characters).');
+      valid = false;
+    }
+
+    // Check email
+    if (!emailRegex.test(emailInput.value.trim())) {
+      showError('emailMsg', emailInput, 'Valid email is required.');
+      valid = false;
+    }
+
+    // Check category
+    if (!categorySelect.value) {
+      showError('categoryMsg', categorySelect, 'Please select a category.');
+      valid = false;
+    }
+
+    // Check priority
+    if (!prioritySelect.value) {
+      showError('priorityMsg', prioritySelect, 'Please select a priority.');
+      valid = false;
+    }
+
+    // Check message
+    if (messageInput.value.trim().length < 10) {
+      showError('messageMsg', messageInput, 'Message must be at least 10 characters.');
+      valid = false;
+    }
+
+    // If anything failed, stop submission
+    if (!valid) {
+      e.preventDefault();
+    }
+  });
+</script>
+
+<%- include('partials/footer') %>
