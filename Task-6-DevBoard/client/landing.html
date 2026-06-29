@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevBoard - Developer Task Manager</title>
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-brand">🛠️ DevBoard</div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="auth.html" class="btn-outline">Login</a>
+      <a href="auth.html" class="btn-primary">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="badge">Built for Developers</span>
+      <h1>Manage your tasks,<br><span class="highlight">ship faster.</span></h1>
+      <p>DevBoard is a clean, powerful task manager designed for developers. Track your coding goals, manage priorities, and stay on top of your work.</p>
+      <div class="hero-buttons">
+        <a href="auth.html" class="btn-primary-lg">Start for free →</a>
+        <a href="#features" class="btn-ghost">See features</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="mock-card">
+        <div class="mock-header">
+          <span class="mock-dot red"></span>
+          <span class="mock-dot yellow"></span>
+          <span class="mock-dot green"></span>
+          <span class="mock-title">DevBoard</span>
+        </div>
+        <div class="mock-task">
+          <div class="mock-task-info">
+            <p>Fix authentication bug</p>
+            <div class="mock-badges">
+              <span class="mock-badge high">high</span>
+              <span class="mock-badge in-progress">in-progress</span>
+            </div>
+          </div>
+        </div>
+        <div class="mock-task">
+          <div class="mock-task-info">
+            <p>Build REST API endpoints</p>
+            <div class="mock-badges">
+              <span class="mock-badge medium">medium</span>
+              <span class="mock-badge done">done</span>
+            </div>
+          </div>
+        </div>
+        <div class="mock-task">
+          <div class="mock-task-info">
+            <p>Deploy to production</p>
+            <div class="mock-badges">
+              <span class="mock-badge high">high</span>
+              <span class="mock-badge todo">todo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <h2>Everything you need</h2>
+    <p class="section-sub">Built with the tools developers actually use</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🔐</div>
+        <h3>Secure Auth</h3>
+        <p>JWT-based authentication keeps your data safe and private.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>REST API</h3>
+        <p>Full CRUD operations via a clean RESTful API built with Express.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">☁️</div>
+        <h3>Cloud Database</h3>
+        <p>MongoDB Atlas keeps your tasks synced and accessible anywhere.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Priority Tracking</h3>
+        <p>Set high, medium, or low priority
