@@ -1,0 +1,141 @@
+[2026-06-29T10:57:12.022Z] [INFO] Connected to MongoDB Atlas
+[2026-06-29T10:57:12.037Z] [INFO] Server running on port 5000
+[2026-06-29T10:57:12.152Z] [INFO] Task summary cron job scheduled (runs daily at midnight)
+[2026-06-29T10:57:41.772Z] [INFO] POST /api/auth/login
+[2026-06-29T10:57:50.278Z] [INFO] POST /api/auth/login
+[2026-06-29T10:59:29.920Z] [INFO] POST /api/auth/register
+[2026-06-29T10:59:44.989Z] [INFO] POST /api/auth/register
+[2026-06-29T10:59:51.772Z] [INFO] POST /api/auth/login
+[2026-06-29T11:00:22.025Z] [INFO] POST /api/auth/register
+[2026-06-29T11:00:28.005Z] [INFO] POST /api/auth/login
+[2026-06-29T11:03:15.584Z] [INFO] POST /api/auth/login
+[2026-06-29T11:03:36.466Z] [INFO] POST /api/auth/login
+[2026-06-29T11:04:34.958Z] [INFO] POST /api/auth/login
+[2026-06-29T11:07:39.028Z] [INFO] POST /api/auth/login
+[2026-06-29T11:08:04.690Z] [INFO] Connected to MongoDB Atlas
+[2026-06-29T11:08:04.708Z] [INFO] Server running on port 5000
+[2026-06-29T11:08:04.753Z] [INFO] Task summary cron job scheduled (runs daily at midnight)
+[2026-06-29T11:08:26.316Z] [INFO] POST /api/auth/login
+[2026-06-29T11:12:05.456Z] [INFO] POST /api/auth/login
+[2026-06-29T11:12:46.777Z] [INFO] POST /api/auth/login
+[2026-06-29T11:13:30.770Z] [INFO] POST /api/auth/login
+[2026-06-29T11:15:46.419Z] [INFO] POST /api/auth/login
+[2026-06-29T11:17:27.258Z] [INFO] POST /api/auth/login
+[2026-06-29T11:18:08.718Z] [INFO] Connected to MongoDB Atlas
+[2026-06-29T11:18:08.732Z] [INFO] Server running on port 5000
+[2026-06-29T11:18:08.775Z] [INFO] Task summary cron job scheduled (runs daily at midnight)
+[2026-06-29T11:18:30.998Z] [INFO] POST /api/auth/login
+[2026-06-29T11:26:43.769Z] [INFO] Connected to MongoDB Atlas
+[2026-06-29T11:26:43.792Z] [INFO] Server running on port 5000
+[2026-06-29T11:26:43.933Z] [INFO] Task summary cron job scheduled (runs daily at midnight)
+[2026-06-29T11:27:27.326Z] [INFO] POST /api/auth/login
+[2026-06-29T11:28:42.310Z] [INFO] GET /api/tasks
+[2026-06-29T11:28:42.479Z] [INFO] GET /api/tasks
+[2026-06-29T11:28:45.599Z] [INFO] GET /api/github/harkirat10kaur
+[2026-06-29T11:28:45.603Z] [INFO] Cache MISS for GitHub user: harkirat10kaur - fetching from API
+[2026-06-29T11:28:45.774Z] [INFO] GET /api/tasks
+[2026-06-29T11:28:46.480Z] [INFO] Cached GitHub data for: harkirat10kaur
+[2026-06-29T11:28:46.648Z] [INFO] GET /api/tasks
+[2026-06-29T11:28:51.899Z] [INFO] GET /api/github/harkirat10kaur
+[2026-06-29T11:28:51.905Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:28:52.079Z] [INFO] GET /api/tasks
+[2026-06-29T11:29:30.167Z] [INFO] POST /api/auth/login
+[2026-06-29T11:29:30.399Z] [INFO] GET /api/tasks
+[2026-06-29T11:30:33.113Z] [INFO] GET /api/github/harkirat10kaur
+[2026-06-29T11:30:33.117Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:30:33.312Z] [INFO] GET /api/tasks
+[2026-06-29T11:30:34.966Z] [INFO] GET /api/github/harkirat10kaur
+[2026-06-29T11:30:34.969Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:30:35.160Z] [INFO] GET /api/tasks
+[2026-06-29T11:30:36.591Z] [INFO] GET /api/github/harkirat10kaur
+[2026-06-29T11:30:36.595Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:30:36.775Z] [INFO] GET /api/tasks
+[2026-06-29T11:30:37.966Z] [INFO] GET /api/github/harkirat10kaur
+[2026-06-29T11:30:37.971Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:30:38.160Z] [INFO] GET /api/tasks
+[2026-06-29T11:32:02.784Z] [INFO] GET /api/tasks
+[2026-06-29T11:32:07.767Z] [INFO] GET /api/github/harkirat10kaur
+[2026-06-29T11:32:07.771Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:32:07.933Z] [INFO] GET /api/tasks
+[2026-06-29T11:32:09.309Z] [INFO] GET /api/github/harkirat10kaur
+[2026-06-29T11:32:09.314Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:32:09.504Z] [INFO] GET /api/tasks
+[2026-06-29T11:32:11.319Z] [INFO] GET /api/github/harkirat10kaur
+[2026-06-29T11:32:11.322Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:32:11.506Z] [INFO] GET /api/tasks
+[2026-06-29T11:34:11.946Z] [INFO] GET /api/tasks
+[2026-06-29T11:34:12.162Z] [INFO] GET /api/tasks
+[2026-06-29T11:34:41.429Z] [INFO] GET /api/tasks
+[2026-06-29T11:34:43.816Z] [INFO] GET /api/tasks
+[2026-06-29T11:34:45.700Z] [INFO] GET /api/tasks
+[2026-06-29T11:34:52.926Z] [INFO] GET /api/github/harkirat10kaur
+[2026-06-29T11:34:52.929Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:34:53.124Z] [INFO] GET /api/tasks
+[2026-06-29T11:34:54.833Z] [INFO] GET /api/github/harkirat10kaur
+[2026-06-29T11:34:54.836Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:34:55.010Z] [INFO] GET /api/tasks
+[2026-06-29T11:35:15.705Z] [INFO] POST /api/auth/login
+[2026-06-29T11:35:32.539Z] [INFO] GET /api/tasks
+[2026-06-29T11:35:32.697Z] [INFO] GET /api/tasks
+[2026-06-29T11:35:35.690Z] [INFO] GET /api/github/harkirat10kaur
+[2026-06-29T11:35:35.693Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:35:35.872Z] [INFO] GET /api/tasks
+[2026-06-29T11:35:37.498Z] [INFO] GET /api/github/harkirat10kaur
+[2026-06-29T11:35:37.501Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:35:37.681Z] [INFO] GET /api/tasks
+[2026-06-29T11:35:39.212Z] [INFO] GET /api/github/harkirat10kaur
+[2026-06-29T11:35:39.216Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:35:39.378Z] [INFO] GET /api/tasks
+[2026-06-29T11:35:42.276Z] [INFO] GET /api/github/harkirat10kaur
+[2026-06-29T11:35:42.279Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:35:42.422Z] [INFO] GET /api/tasks
+[2026-06-29T11:36:21.038Z] [INFO] POST /api/auth/login
+[2026-06-29T11:38:42.192Z] [INFO] POST /api/auth/login
+[2026-06-29T11:40:44.702Z] [INFO] POST /api/auth/login
+[2026-06-29T11:40:59.002Z] [INFO] POST /api/auth/register
+[2026-06-29T11:41:08.629Z] [INFO] POST /api/auth/login
+[2026-06-29T11:43:12.572Z] [INFO] POST /api/auth/login
+[2026-06-29T11:45:26.539Z] [INFO] POST /api/auth/login
+[2026-06-29T11:51:20.914Z] [INFO] POST /api/auth/login
+[2026-06-29T11:54:07.980Z] [INFO] Connected to MongoDB Atlas
+[2026-06-29T11:54:08.018Z] [INFO] Server running on port 5000
+[2026-06-29T11:54:08.161Z] [INFO] Task summary cron job scheduled (runs daily at midnight)
+[2026-06-29T11:54:35.061Z] [INFO] Cache MISS for GitHub user: harkirat10kaur - fetching from API
+[2026-06-29T11:54:35.572Z] [INFO] Cached GitHub data for: harkirat10kaur
+[2026-06-29T11:54:37.607Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:56:16.766Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:56:26.707Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:57:45.674Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:57:47.070Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T11:57:48.232Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T12:07:13.221Z] [INFO] Connected to MongoDB Atlas
+[2026-06-29T12:07:13.234Z] [INFO] Server running on port 5000
+[2026-06-29T12:07:13.270Z] [INFO] Task summary cron job scheduled (runs daily at midnight)
+[2026-06-29T12:07:28.358Z] [INFO] Cache MISS for GitHub user: harkirat10kaur - fetching from API
+[2026-06-29T12:07:28.987Z] [INFO] Cached GitHub data for: harkirat10kaur
+[2026-06-29T12:07:30.707Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T12:07:32.601Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T12:07:33.745Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T12:10:05.226Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T12:10:14.400Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T12:15:56.261Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T12:16:55.360Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T12:17:02.215Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T12:20:59.208Z] [INFO] Cache MISS for GitHub user: harkirat10kaur - fetching from API
+[2026-06-29T12:20:59.780Z] [INFO] Cached GitHub data for: harkirat10kaur
+[2026-06-29T12:21:02.248Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T12:21:57.489Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T12:27:14.148Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T12:28:30.302Z] [INFO] Connected to MongoDB Atlas
+[2026-06-29T12:28:30.331Z] [INFO] Server running on port 5000
+[2026-06-29T12:28:30.472Z] [INFO] Task summary cron job scheduled (runs daily at midnight)
+[2026-06-29T12:29:19.053Z] [INFO] Cache MISS for GitHub user: harkirat10kaur - fetching from API
+[2026-06-29T12:29:19.662Z] [INFO] Cached GitHub data for: harkirat10kaur
+[2026-06-29T12:29:32.265Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T12:29:36.818Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T12:30:10.201Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T12:35:38.316Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T12:37:56.602Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
+[2026-06-29T12:40:20.701Z] [INFO] Cache MISS for GitHub user: harkirat10kaur - fetching from API
+[2026-06-29T12:40:21.225Z] [INFO] Cached GitHub data for: harkirat10kaur
+[2026-06-29T12:40:24.221Z] [INFO] Cache HIT for GitHub user: harkirat10kaur
